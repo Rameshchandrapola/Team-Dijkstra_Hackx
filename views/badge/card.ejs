@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/card.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.js" integrity="sha512-wUa0ktp10dgVVhWdRVfcUO4vHS0ryT42WOEcXjVVF2+2rcYBKTY7Yx7JCEzjWgPV+rj2EDUr8TwsoWF6IoIOPg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>ID - Card</title>
+</head>
+
+
+<body style="width: 100%;">
+    
+    <h1>ID - Card</h1>
+<!-- Front Face -->
+<div class="card">
+        <div class="id-card" id="front-face">
+            <h3><%=badge.institute%></h3>
+            <div class="img-container">
+                <div class="image"><img src="<%= badge.image.url %> " alt=""></div>
+            </div>
+            <div class="details">
+            <p>Student Name :</p><div><h5> <%= badge.name %></h5></div>
+            <p>Department :</p><div><h5> <%= badge.department %>  </h5></div>
+            <p>Roll Number :</p><div><h5> <%= badge.rollNumber %>  </h5></div>
+            </div>
+            <div class="circle-2"></div>
+            <div class="circle-1"></div>
+            <div class="qr"> <img style="width: 80px;" src="<%= badge.qrcode%> " alt=""> </div>
+    </div>
+
+<!-- Back face -->
+    <div class="id-card" id="back-face">
+        <h3><%=badge.institute%></h3>
+        <div class="details details-back">
+        <p>Address :</p><div><h5><%=badge.address%></h5></div>
+        <p>Institute-Mail ID :</p><div><h5><%=badge.email%></h5></div>
+        <p>Contact :</p><div><h5><%=badge.mobile%> </h5></div>
+
+        </div>
+        <div class="sign"><img style="width: 111px;
+            height: 50px;" src="<%= badge.signature.url %>" alt=""></div>
+        <div class="watermark"><img src="/images/<%=badge.institute.toLowerCase()%>.svg"></div>
+        <div class="circle-2"></div>
+        <div class="circle-1"></div>
+</div>
+</div>
+<div class="buttons">
+    <a onclick="frontdownload()" class="front">Generate Front</a>
+    <a class="edit" href="/badge/edit/<%= badge._id%>">Edit</a>
+     <form class="delete" action="/badge/delete/<%=badge._id%>?_method=DELETE" method="post">
+    <button type="submit">Delete</button>
+    </form> 
+
+    <a onclick="backdownload()" class="back">Generate Back</a>
+</div>
+<script>
+    function frontdownload(){
+        var front = document.getElementById('front-face');
+ 
+     domtoimage.toPng(front)
+     .then(function (dataUrl) {
+         var img = new Image();
+         img.src = dataUrl;
+         var link = document.querySelector('.front')
+         console.log("Generated")
+         link.href = dataUrl;
+         link.innerHTML = 'Download Front';
+         link.classList.toggle("white");
+         link.download = true;
+         //document.body.appendChild(link)
+         
+     })
+     .catch(function (error) {
+         console.error('oops, something went wrong!', error);
+     });
+     
+    }
+    function backdownload(){
+        var back = document.getElementById('back-face');
+ 
+     domtoimage.toPng(back)
+     .then(function (dataUrl) {
+         var img = new Image();
+         img.src = dataUrl;
+         var link = document.querySelector('.back')
+         console.log("Generated")
+         link.href = dataUrl;
+         link.innerHTML = 'Download Back';
+         link.classList.toggle("white");
+         link.download = true;
+         
+     })
+     .catch(function (error) {
+         console.error('oops, something went wrong!', error);
+     });
+     
+    }
+    
+</script>
+
+</body>
+</html>

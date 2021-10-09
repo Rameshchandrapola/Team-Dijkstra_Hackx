@@ -1,0 +1,26 @@
+<% layout('layouts/boilerplate')%>   <main>
+    <link rel="stylesheet" href="/creater.css">
+    <h2 class="form-title">
+        Enter Credencials
+    </h2>
+    <form action="/badge/getBadgeadmin" style="width: 30%; margin: auto;" method="post" >
+        <!-- collumn-1 -->
+        <div class="col-1">
+            
+            <div class="rollno"><label for="rollno">Username :
+                </label>
+                <input type="text" placeholder="username" name="username" id=""  required/>
+            </div>
+            <div class="contact"><label for="contact">Password :
+
+            </label>
+                <input type="password" name="password" placeholder="password" required>
+            </div>
+
+    
+            <div class="fin" style="position: inherit;">
+                <input id="clear" type="reset">
+                <button type="submit">Submit</button>
+            </div>
+    </form>
+</main>

@@ -1,0 +1,195 @@
+*{
+margin : 0;
+box-sizing: border-box;
+}
+
+html{
+font-size: 100%;
+}
+
+
+body{
+width: 100vw;
+height: 100vh;
+background: #eeeeee;
+font-family: 'Source Sans Pro', sans-serif;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+text-decoration: none;
+color: black;
+font-size: 1rem;
+}
+h1{
+font-size: 2rem+1vw;
+}
+
+li,
+button,
+label,
+input,
+p,
+a {
+font-size: 1rem+1vw;
+}
+
+h2 {
+font-size: 3.5rem+1vw;
+}
+
+h3 {
+font-size: 2.4rem+1vw;
+font-weight: normal;
+}
+
+h4,
+h5 {
+font-size: 1.5+1vw;
+}
+
+.main-head {
+box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+z-index: 2;
+position: relative;
+}
+
+
+nav {
+width: 95%;
+margin: auto;
+display: flex;
+align-items: center;
+min-height: 10vh;
+padding: 1rem 0rem;
+}
+
+.nav-links {
+display: flex;
+justify-content: space-around;
+flex: 1 1 20rem;
+}
+
+main{
+margin: 0;
+max-width: 100vw;
+height: 90vh;
+justify-content: center;
+align-items: center;
+position: relative;
+
+}
+
+.form-title{
+    text-align: center;
+    margin: 3rem 1rem 0rem 0rem;
+}
+
+form{
+max-height: 90vh;
+display: flex;
+width: 90%;
+margin: auto;
+}
+
+.col-1{
+flex: 1 1 40rem;
+margin: 2rem;
+}
+
+.col-2{
+flex: 1 1 40rem;
+margin: 2rem;
+}
+
+.col-1 input, 
+.col-2 input{
+border: none;
+min-height: 2rem;
+}
+
+
+.col-1 label,
+.col-2 label{
+color: black;
+padding: 1rem 0rem;
+}
+
+.name, 
+.rollno, 
+.institute-name, 
+.passing,.photo-id,
+.year,
+.contact,
+.department,
+.address,
+.email,
+.signature{
+display: grid;
+}
+
+.photo-id input, .signature input{
+    display: none;
+}
+
+.fin{
+    width: 90%;
+    margin: 2rem 2rem 0 auto;
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    bottom: 0;
+}
+
+
+button{
+    max-width: 30%;
+    margin-right: auto;
+    border: none;
+    color: white;
+    background: #1FB6FF;
+    text-align: center;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    border-radius: 6px;
+    cursor: pointer;
+
+}
+
+#clear{
+    background: #fa4d4d;
+    margin-right: 1rem;
+}
+.required{
+    color: red;
+}
+
+/* Footer */
+footer {
+    color: white;
+    background: rgb(27, 36, 51);
+    align-items: center;
+    justify-content: center;
+    min-height: 10vh;
+  }
+  
+  footer ul {
+    display: flex;
+    list-style: none;
+    flex: 1 1 40rem;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  img {
+    max-width: 3rem;
+    margin: 2rem 2rem  0rem 4rem;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  img:hover {
+    transform: scale(125%);
+  }

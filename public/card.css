@@ -1,0 +1,278 @@
+*{
+margin: 0;
+padding: 0;
+
+}
+
+html{
+font-size: 100%;
+}
+
+
+body{
+width: 100vw;
+height: 100vh;
+background: #eeeeee;
+font-family: 'Source Sans Pro', sans-serif;
+}
+
+ul{
+list-style: none;
+}
+
+a{
+text-decoration: none;
+}
+h1{
+font-size: 2rem+1vw;
+}
+
+li,
+button,
+label,
+input,
+p
+{
+font-size: 1rem+1vw;
+}
+
+h2 {
+font-size: 3.5rem+1vw;
+}
+
+h3 {
+font-size: 2.4rem+1vw;
+font-weight: normal;
+}
+
+h4,
+h5 {
+font-size: 1.5+1vw;
+}
+
+h1{
+text-align: center;
+margin: 2rem;
+}
+
+p{
+margin: 0.3rem;
+}
+
+.id-card{
+overflow: hidden;
+background: white;
+width: 350px;
+height: 550px;
+margin: auto;
+display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+align-content: center;
+justify-content: flex-start;
+align-items: flex-start;
+position: relative;
+max-width: 400px;
+padding: 0;
+}
+
+h3{
+position: absolute;
+top: 0;
+margin: 2rem;
+
+}
+
+.img-container{
+width: 100%;
+display: flex;
+justify-content: center;
+margin-top: 20%;
+}
+
+.image{
+    width: 8rem;
+    height: 8rem;
+    border: 5px dashed #FE5E5E;
+    border-radius: 50%;
+    align-self: center;
+    overflow: hidden;
+}
+
+.image img{
+height: 100%;
+}
+
+.details{
+display: grid;
+width: 80%;
+margin: 2rem;
+z-index: 1;
+}
+
+
+.details div{
+background: #dbdbdf;
+padding: 3px;
+margin: 2px;
+border-radius: 1px;
+max-width: 50%;
+padding: 0.3rem;
+color: rgb(117, 115, 115);
+}
+
+.qr{
+height: 5rem;
+width: 5rem;
+margin: 1rem;
+background: grey;
+position: absolute;
+bottom: 3rem;
+right: 2rem;
+}
+
+.circle-1, .circle-2{
+border-radius: 50%;
+height: 200px;
+width: 140%;
+background: #3f3f3f;
+position: absolute;
+bottom: 0;
+left: -20%;
+transform: translateY(30%);
+}
+
+.circle-2{
+background: #fe5e5e;
+transform: translateY(20%);
+}
+
+.details-back{
+width: 90%;
+margin: auto;
+margin-top: 30%;
+}
+
+.details-back div{
+min-width: 90%;
+height: auto;
+font-weight: normal;
+}
+
+
+.sign,
+.watermark{
+height: 3rem;
+width: 7rem;
+margin: 1rem;
+background: rgb(255, 255, 255);
+position: absolute;
+bottom: 0rem;
+right: 0rem;
+z-index: 1;
+}
+
+.watermark{
+left: 0;
+height: 4rem;
+width: 4rem;
+border-radius: 50%;
+padding: 0.3rem;
+display: flex;
+align-items: center;
+}
+
+.watermark img{
+    width: 100%;
+margin: auto;
+    object-fit: cover;
+}
+.sign img{
+    height: 100%;
+    object-fit: cover;
+}
+
+.card{
+max-width: 50rem;
+margin: auto;
+display: flex;
+flex-wrap: wrap;
+}
+
+.buttons{
+padding: 5rem;
+max-width: 50rem;
+margin: auto;
+display: flex;
+}
+
+.front,
+.back,
+.edit,
+.delete{
+flex: 1 1 2rem;
+max-width: 30%;
+margin-right: auto;
+border: none;
+color: white;
+background: #1FB6FF;
+text-align: center;
+padding: 0.5rem;
+margin: 0.5rem 1;
+border-radius: 6px;
+cursor: pointer;
+margin: 0 2rem;
+}
+
+.delete button{
+    color: white;
+cursor: pointer;
+    height: 100%;
+    width: 100%;
+    border: none;
+    background: transparent;
+}
+
+.edit, .delete{
+background: #fa4d4d;
+}
+
+.delete form{
+    padding: 0;
+    margin: 0;
+}
+
+.white{
+background: white;
+color:#1FB6FF;
+font-weight: 600;
+}
+
+@media(max-width: 700px){
+.card{
+    flex-direction: column;
+    align-items: center;
+}
+.id-card{
+    margin: 1rem;
+}
+.buttons{
+    flex-direction: column;
+    align-items: center;
+}
+.buttons a, .buttons button{
+    flex: 0;
+    margin: 1rem;
+    width: 100%;
+}
+.buttons form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.buttons button{
+    margin: 0;
+    width: 100%;
+}
+}

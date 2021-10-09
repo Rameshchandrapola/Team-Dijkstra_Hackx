@@ -1,0 +1,83 @@
+<% layout('layouts/boilerplate')%>
+    <main>
+        <link rel="stylesheet" href="/creater.css">
+        <h2 class="form-title">
+            Edit Details
+        </h2>
+        <form action="/badge/edit/<%=badge._id%>?_method=PUT" method="post" enctype="multipart/form-data">
+            <!-- collumn-1 -->
+            <div class="col-1">
+                <div class="name">
+                    <label for="name">Name :
+                    </label>
+                    <input placeholder="Student's Name" type="text" name="name" value="<%= badge.name %>"  required/>
+                </div>
+
+                <div class="rollno"><label for="rollno">Roll-No :
+                    </label>
+                    <input type="text" placeholder="ex. U20CS020" value="<%= badge.rollNumber %>" name="rollNumber" id=""  required/>
+                </div>
+
+                <div class="institute-name">
+                    <label for="institute-name">Institute-name :
+                    </label>
+                    <input type="text" name="institute" placeholder=" Institute' Name" disabled value="<%= badge.institute %>"  required/>
+                </div>
+
+                <div class="passing"><label for="passing">Duration :
+                </label>
+                    <input type="text" name="duration" id="passing" value="<%= badge.duration %>" placeholder="ex. 2020-2024" required/>
+                </div>
+
+                <div class="photo-id">
+                    <label for="photo-id">Photo-ID :
+
+                    </label>
+                    <img style="max-width: 9rem;margin: 0;width: 12vh;
+                    transition: all 0.3s ease-in-out;" src="<%=badge.image.url%>" alt="">
+                    <button onclick="document.getElementById('photo-id').click()">UPLOAD</button>
+                    <input type="file" name="images" id="photo-id" >
+                </div>
+            </div>
+
+            <!-- collumn-2 -->
+            <div class="col-2">
+
+                <div class="contact"><label for="contact">Contact :
+
+                </label>
+                    <input type="number" name="mobile" value="<%= badge.mobile %>" placeholder="Contant number" required>
+                </div>
+                <div class="contact"><label for="contact">Email :
+
+                </label>
+                    <input type="email" name="email" value="<%= badge.email %>" placeholder="ex. user34@gmail" required>
+                </div>
+
+                <div class="department"><label for="department">Department :
+                </label>
+                    <input type="text" name="department" value="<%=badge.department %>" placeholder="ex. Mechanical Engineering" required/>
+                </div>
+
+                <div class="address"><label for="address">Address :
+
+                </label>
+                    <textarea style="margin: 0px;
+                    height: 56px;
+                    width: auto;" type="text" name="address" placeholder="Address"><%= badge.address %></textarea>
+                </div>
+
+                <div class="signature">
+                    <label for="signature">Signature :</label>
+                    <img style="max-width: 9rem;width: 12vh;margin: 0;
+                    transition: all 0.3s ease-in-out;" src="<%=badge.image.url%>" alt="">
+                    <button onclick="document.getElementById('signature').click()">UPLOAD</button>
+                    <input type="file" name="images" id="signature" >
+                </div>
+            </div>
+                <div class="fin">
+                    <button id="clear" type="reset">Clear</button>
+                    <button type="submit">Submit</button>
+                </div>
+        </form>
+    </main>

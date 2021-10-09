@@ -1,0 +1,151 @@
+*{
+    margin : 0; 
+    box-sizing: border-box;
+    }
+    
+    html{
+    font-size: 100%;
+    }
+    
+    
+    body{
+    width: 100%;
+    height: 100%;
+    background: #eeeeee;
+    font-family: 'Source Sans Pro', sans-serif;
+    }
+    
+    ul{
+        list-style: none;
+    }
+    
+    a{
+    text-decoration: none;
+    }
+    h1{
+    font-size: 2rem+1vw;
+    }
+    
+    li,
+    button,
+    label,
+    input,
+    p,
+    a {
+    font-size: 1rem+1vw;
+    }
+    
+    h2 {
+    font-size: 3.5rem+1vw;
+    }
+    
+    h3 {
+    font-size: 2.4rem+1vw;
+    font-weight: normal;
+    }
+    
+    h4,
+    h5 {
+    font-size: 1.5+1vw;
+    }
+    
+    main{
+    margin: 0;
+    max-width: 100vw;
+    height: 90vh;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+    }
+    
+    .form-title{
+        text-align: center;
+        margin: 3rem 1rem 0rem 0rem;
+    }
+    
+    form{
+    width: 60%;
+    min-width: 50vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: auto;
+    }
+    
+    .col-1{
+    flex: 1 1 40rem;
+    margin: 2rem;
+    }
+    
+    .col-2{
+    flex: 1 1 40rem;
+    margin: 2rem;
+    }
+    
+    .col-1 input, 
+    .col-2 input,
+    .col-2 textarea{
+    border: none;
+    padding: 0.5rem;
+
+    min-height: 2rem;
+    }
+    
+    
+    .col-1 label,
+    .col-2 label{
+    color: black;
+    padding: 1rem 0rem;
+    }
+    
+    .name, 
+    .rollno, 
+    .institute-name, 
+    .passing,.photo-id,
+    .year,
+    .contact,
+    .department,
+    .address,
+    .email,
+    .signature{
+    display: grid;
+    }
+    
+    .photo-id input, .signature input{
+        display: none;
+    }
+    
+    .fin{
+grid-column-start: 2;
+        width: 90%;
+        margin: 2rem 2rem 0 auto;
+        display: flex;
+        justify-content: flex-end;
+        bottom: 0;
+    }
+    
+    
+    #clear, button{
+        max-width: 30%;
+        margin-right: auto;
+        border: none;
+        color: white;
+        background: #1FB6FF;
+        text-align: center;
+        padding: 0.5rem;
+        margin: 0.5rem 0;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+    
+    #clear{
+        background: #fa4d4d;
+        margin-right: 1rem;
+    }
+    
+
+      @media(max-width: 700px){
+        form{
+          display: block;
+        }
+      }

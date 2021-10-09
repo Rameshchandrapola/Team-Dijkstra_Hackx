@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+    }
+    
+    html{
+    font-size: 100%;
+    }
+    
+    
+    body{
+    width: 100vw;
+    height: 100vh;
+    background: #eeeeee;
+    font-family: 'Source Sans Pro', sans-serif;
+    }
+
+
+.team-container 
+{
+    width:100%;
+    height: auto;
+    background: #FF9191;
+    border-radius: 30px;
+}
+.text
+{
+    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    color:rgb(255, 255, 255);
+    width: 40vw;
+margin: auto;
+margin-top: 20px;
+padding: 0.5rem;
+font-size: 1.5rem;
+border-radius: 20px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.row
+{
+    width: 60%;
+    margin:auto;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-items: center;
+    justify-content: center;
+}
+@media(max-width: 768px)
+{
+    .row{
+        width: 100%;
+    }
+}
+.profile-card
+{
+    background-color: #ffffff;
+    width: 270px;
+    height: 250px;
+    margin: 1.5rem;
+    border-radius: 5px;
+    box-shadow: 5px 5px 20px 5px #d1d1d1cb;
+}
+@media(max-width: 468px)
+{
+    .profile-card
+    {
+        width: 290px;
+        height: 250px;
+    }
+}
+.profile-content
+{
+    padding:15px;
+}
+img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+}
+.profile-image
+{
+    text-align: center;
+}
+
+
+.desc
+{
+    text-align: center;
+}
+.desc h2
+{
+    color: rgb(94, 169, 255);
+    font-size: 20px;
+}
+.desc p{
+    font-size: 13px;
+    line-height: 1.3em;
+    margin-top: 10px;
+    color: #000000;
+     
+}
+.btn-div
+{
+    text-align: center;
+}
+.btn
+{
+    background: linear-gradient(45deg,#87adfe,#ff77cd);
+    color: #ffffff;
+    width: 150px;
+    cursor: pointer;
+    height: 38px;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 30px;
+    margin-top: 30px;
+    outline:none;
+    border:none;
+    text-transform: uppercase;
+    box-shadow: 4px 4px 8px 0 rgb(55 63 81 / 39%);
+    opacity: 1;
+}

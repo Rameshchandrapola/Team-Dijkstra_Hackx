@@ -1,0 +1,65 @@
+*{
+margin : 0;
+box-sizing: border-box;
+}
+
+html{
+font-size: 100%;
+}
+
+
+body{
+width: 100vw;
+height: 100vh;
+background: #eeeeee;
+font-family: 'Source Sans Pro', sans-serif;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+text-decoration: none;
+color: black;
+font-size: 1rem;
+}
+h1{
+font-size: 2rem+1vw;
+}
+
+li,
+button,
+label,
+input,
+p,
+a {
+font-size: 1rem+1vw;
+}
+
+h2 {
+font-size: 3.5rem+1vw;
+}
+
+h3 {
+font-size: 2.4rem+1vw;
+font-weight: normal;
+}
+
+h4,
+h5 {
+font-size: 1.5+1vw;
+}
+
+form{
+    max-height: 90vh;
+    display: block;
+    width: 30%;
+    margin: 10vh auto;
+    }
+    
+ 
+.rollno, 
+.contact{
+display: grid;
+}

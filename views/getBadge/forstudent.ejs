@@ -1,0 +1,26 @@
+<% layout('layouts/boilerplate')%>   <main>
+        <h2 class="form-title">
+            Enter Your Details
+        </h2>
+        <link rel="stylesheet" href="/creater.css">
+        <form action="/badge/getBadge" style="width: 30%; margin: auto;" method="post" >
+            <!-- collumn-1 -->
+            <div class="col-1">
+                
+                <div class="rollno"><label for="rollno">Roll-No :
+                    </label>
+                    <input type="text" placeholder="ex. U20CS020" name="rollNumber" id=""  required/>
+                </div>
+                <div class="contact"><label for="contact">Contact :
+
+                </label>
+                    <input type="number" name="mobile" placeholder="Contant number" required>
+                </div>
+
+        
+                <div class="fin" style="position: inherit;">
+                    <input id="clear" type="reset">
+                    <button type="submit">Submit</button>
+                </div>
+        </form>
+    </main>

@@ -1,0 +1,11 @@
+<% layout('layouts/boilerplate')%>
+<link rel="stylesheet" href="/index.css">
+
+<div class="container">
+        <h1 class="title">All Badges</h1>
+    <ul>
+        <% for(b of badges){ %> 
+            <a href="/badge/<%=b._id%>" ><li class="lis"><%= b.name %></li></a>
+         <% } %>
+    </ul> 
+</div>

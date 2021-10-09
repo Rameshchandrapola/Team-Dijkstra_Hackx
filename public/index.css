@@ -1,0 +1,50 @@
+*{
+margin: 0;
+padding: 0;
+
+}
+
+html{
+font-size: 100%;
+}
+
+
+body{
+width: 100vw;
+height: 100vh;
+background: #eeeeee;
+font-family: 'Source Sans Pro', sans-serif;
+}
+
+.title{
+    margin: 2rem;
+}
+
+.container a{
+    text-decoration: none;
+}
+
+.container{
+    width: 70vw;
+    margin-left: 5vw;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+
+.container ul{
+   list-style: none; 
+}
+
+.container li{
+    height: 2rem;
+    margin: 1rem;
+    padding: 0.3rem;
+    background: white;
+    border-radius: 5px;
+}
+
+.container li:hover{
+border: 0.1rem solid #1FB6FF;
+}

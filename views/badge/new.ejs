@@ -1,0 +1,83 @@
+<% layout('layouts/boilerplate')%>
+   <main>
+    <link rel="stylesheet" href="/creater.css">
+        <h2 class="form-title">
+            Fill Your Details
+        </h2>
+        <form action="/badge" method="post" enctype="multipart/form-data">
+            <!-- collumn-1 -->
+            <div class="col-1">
+                <div class="name">
+                    <label for="name">Name :
+                    </label>
+                    <input placeholder="Student's Name" type="text" name="name"  required/>
+                </div>
+
+                <div class="rollno"><label for="rollno">Roll-No :
+                    </label>
+                    <input type="text" placeholder="ex. U20CS020" name="rollNumber" id=""  required/>
+                </div>
+
+                <div class="institute-name">
+                    <label for="institute-name">Institute-name :
+                    </label>
+                    <input readonly="true" type="text" name="institute"<% if(institute){ %>
+                       value="<%= institute %>" 
+                   <% } %>  
+                      placeholder=" Institute' Name"  required/>
+                </div>
+
+                <div class="passing"><label for="passing">Duration :
+                </label>
+                    <input type="text" name="duration" id="passing" placeholder="ex. 2020-2024" required/>
+                </div>
+
+                <div class="photo-id">
+                    <label for="photo-id">Photo-ID :
+
+                    </label>
+                    <button onclick="document.getElementById('photo-id').click()">UPLOAD</button>
+                    <input type="file" name="images" id="photo-id" required>
+                </div>
+            </div>
+
+            <!-- collumn-2 -->
+            <div class="col-2">
+
+                <div class="contact"><label for="contact">Contact :
+
+                </label>
+                    <input type="number" name="mobile" placeholder="Contant number" required>
+                </div>
+                <div class="email"><label for="email">Email :
+
+                </label>
+                    <input type="email" name="email" placeholder="ex. user34@gmail.com" required>
+                </div>
+
+                <div class="department"><label for="department">Department :
+                </label>
+                    <input type="text" name="department" placeholder="ex. Mechanical Engineering" required/>
+                </div>
+
+                <div class="address"><label for="address">Address :
+
+                </label>
+                    <textarea style="margin: 0px;
+                    height: 56px;
+                    width: auto;" type="text" name="address" placeholder="Address"> </textarea>
+                </div>
+
+                <div class="signature">
+                    <label for="signature">Signature :</label>
+                    <button onclick="document.getElementById('signature').click()">UPLOAD</button>
+                    <input type="file" name="images" id="signature" required>
+                </div>
+            </div>
+                <div class="fin">
+                    <input id="clear" type="reset">
+                    <button type="submit">Submit</button>
+                </div>
+        </form>
+    </main>
+      

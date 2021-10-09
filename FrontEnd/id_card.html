@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="card.css">
+    <title>ID - Card</title>
+</head>
+
+
+<body>
+
+    <h1>ID - Card</h1>
+<!-- Front Face -->
+<div class="card">
+        <div class="id-card" id="front-face">
+            <h3>Institute Name</h3>
+            <div class="img-container">
+                <img src="/FrontEnd/dev.png" alt="">
+            </div>
+            <div class="details">
+            <p>Student Name :</p><span> Student </span >
+            <p>Department :</p><span> E.C.E </span  >
+            <p>Roll Number :</p><span> U20ME021 </span>
+            </div>
+            <div class="circle-2"></div>
+            <div class="circle-1"></div>
+            <div class="qr"></div>
+    </div>
+
+<!-- Back face -->
+    <div class="id-card" id="back-face">
+        <h3>Institute Name</h3>
+        <div class="details details-back">
+        <p>Adress :</p><span> Lorem ipsum, dolor sit amet consectetur adipisicing elit.</span >
+        <p>Institute-Mail ID :</p><span>abc@xyz.institute.com</span  >
+        <p>Contact :</p><span> +91 XXX-XXX-XXXX </span>
+
+        </div>
+        <div class="sign"></div>
+        <div class="watermark"></div>
+        <div class="circle-2"></div>
+        <div class="circle-1"></div>
+</div>
+</div>
+<div class="buttons">
+    <button onclick="location.href='#'" class="front" type="button"> Front</button>
+    <a href="#" class="edit">Edit</a>
+    <a href="#" class="delete">Delete</a>
+    <button onclick="location.href='#'" class="back" type="button">Back</button>
+</div>
+</body>
+</html>
