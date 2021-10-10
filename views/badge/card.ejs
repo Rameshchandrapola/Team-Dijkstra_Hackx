@@ -7,14 +7,48 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/card.css">
+    <link href="/nav.css" rel="stylesheet">
+    <link href="/footer.css" rel="stylesheet">
+    <link rel="stylesheet" href="/card.css">    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.js" integrity="sha512-wUa0ktp10dgVVhWdRVfcUO4vHS0ryT42WOEcXjVVF2+2rcYBKTY7Yx7JCEzjWgPV+rj2EDUr8TwsoWF6IoIOPg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>ID - Card</title>
 </head>
 
 
 <body style="width: 100%;">
-    
+    <header class="main-head">
+        <nav>
+            <div class="logo"><a href="/"><img src="/images/logo.svg"><h1>Badge-Generater</h1></a></div>
+          <ul class="nav-links" style="color: white;">
+            <li><a href="/">HOME</a></li>
+            <li><a href="/badge/user">STUDENT</a></li>
+            <li><a href="/badge/admin">ADMIN</a></li>
+          </ul>
+          <div class="burger">
+            <span class="line1"></span>
+            <span class="line2"></span>
+            <span class="line3"></span>
+          </div>
+        </nav>
+      </header>
+      <script>
+        const nav = document.querySelector(".nav-links");
+        const burger = document.querySelector(".burger");
+        const links = nav.querySelectorAll("a");
+        
+        burger.addEventListener("click", () => {
+        nav.classList.toggle("nav-open");
+        burger.classList.toggle("toggle");
+        });
+        
+        links.forEach(link => {
+        link.addEventListener("click", () => {
+        nav.classList.toggle("nav-open");
+        burger.classList.toggle("toggle");
+        });
+        });
+        
+        </script>
     <h1>ID - Card</h1>
 <!-- Front Face -->
 <div class="card">
@@ -102,6 +136,18 @@
     }
     
 </script>
-
+<footer id="footer">
+    <h4>Badge-Generator &copy; 2021</h4>
+    <div id="contri">
+          <ul>
+          <lh>Contriutors</lh>
+          <li><a href="https://github.com/ayush572" target="_blank">Ayush Daga</a></li>
+          <li><a href="https://github.com/Aniumbott" target="_blank">Aniket Rana</a></li>
+          <li><a href="https://github.com/Harshil-Jani" target="_blank">Harshil Jani</a></li>
+          <li><a href="https://github.com/Rameshchandrapola" target="_blank">Pola Ramesh Chandra</a></li>
+          <li><a href="https://github.com/rahuljadav21" target="_blank">Rahul Jadav</a></li>
+          </ul>
+        </div>
+  </footer>
 </body>
 </html>

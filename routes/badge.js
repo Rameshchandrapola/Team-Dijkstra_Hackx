@@ -10,15 +10,20 @@ router.get('/getbadgeadmin',(req,res)=>{
     res.redirect('/badge/admin')
 })
 router.post('/getbadgeadmin',async(req,res)=>{
-    if(!req.body){
-        res.send('You are unAuthorized for this page')
-    }
-    if(req.body.username=='secretadmin' && req.body.password=='admin@2021'){
-        const badges = await Badge.find({});
-        res.render('badge/index',{badges}) 
-    }else{
-        res.send('Username or Password is Incorrect !!!')
-    }
+    try{
+        if(!req.body){
+            res.send('You are unAuthorized for this page')
+        }
+        if(req.body.username=='secretadmin' && req.body.password=='admin@2021'){
+            const badges = await Badge.find({});
+            res.render('badge/index',{badges}) 
+        }else{
+            res.send('Username or Password is Incorrect !!!')
+        }
+       
+    }catch(e){
+        res.send(e)
+     }
    
 })
 router.get('/user',(req,res)=>{
@@ -28,13 +33,27 @@ router.get('/admin',(req,res)=>{
     res.render('getBadge/forAdmin')
 })
 router.post('/getbadge',async(req,res)=>{
-    const badge = await Badge.findOne({rollNumber:req.body.rollNumber,mobile:req.body.mobile});
-    res.redirect(`/badge/${badge._id}`)
+    try{
+        const badge = await Badge.findOne({rollNumber:req.body.rollNumber,mobile:req.body.mobile});
+        if(!badge){
+            res.send("Roll Number or mobile Number is Incorrect !!!")
+        }
+        res.redirect(`/badge/${badge._id}`)
+
+    }catch(e){
+        res.send(e)
+     }
+   
 })
 
 router.get('/new',async(req,res)=>{
-    const {institute} = req.query;
-    res.render('badge/new',{institute})
+    try{
+        const {institute} = req.query;
+        res.render('badge/new',{institute})
+    }catch(e){
+        res.send(e)
+     }
+  
 })
 router.post('/',upload.array('images'),async(req,res)=>{
     try{  
@@ -52,12 +71,12 @@ router.post('/',upload.array('images'),async(req,res)=>{
     
     if(req.files){
         badge.signature = {
-           url:req.files[0].path,
-           filename:req.files[0].filename
+           url:req.files[1].path,
+           filename:req.files[1].filename
         }
        badge.image = {
-            url:req.files[1].path,
-            filename:req.files[1].filename
+            url:req.files[0].path,
+            filename:req.files[0].filename
         }}
     
     await badge.save()
@@ -68,14 +87,24 @@ router.post('/',upload.array('images'),async(req,res)=>{
 })
 
 router.get('/:id',async(req,res)=>{
-    const {id} = req.params;
-    const badge = await Badge.findById(id);
-    res.render('badge/card',{badge})
+    try{
+        const {id} = req.params;
+        const badge = await Badge.findById(id);
+        res.render('badge/card',{badge})
+    }catch(e){
+        res.send(e)
+     }
+
 })
 router.get('/edit/:id',async(req,res)=>{
-    const {id} = req.params
-    const badge = await Badge.findById(id);
-    res.render('badge/edit',{badge})
+    try{
+        const {id} = req.params
+        const badge = await Badge.findById(id);
+        res.render('badge/edit',{badge})
+    }catch(e){
+        res.send(e)
+     }
+   
 })
 router.put('/edit/:id',upload.array('images'),async(req,res)=>{
     try{ 
@@ -98,12 +127,12 @@ router.put('/edit/:id',upload.array('images'),async(req,res)=>{
            
           
             badge.signature = {
-             url:req.files[0].path,
-             filename:req.files[0].filename
+             url:req.files[1].path,
+             filename:req.files[1].filename
          }
             badge.image = {
-              url:req.files[1].path,
-              filename:req.files[1].filename
+              url:req.files[0].path,
+              filename:req.files[0].filename
           }}
        await badge.save()
        res.redirect(`/badge/${id}`);
@@ -115,8 +144,13 @@ router.put('/edit/:id',upload.array('images'),async(req,res)=>{
 })
 
 router.delete('/delete/:id/',async(req,res)=>{
-    const {id}= req.params;
-    await Badge.findByIdAndDelete(id);
-      res.redirect(`/badge`)
+    try{
+        const {id}= req.params;
+        await Badge.findByIdAndDelete(id);
+          res.redirect(`/badge`)
+    }catch(e){
+        res.send(e)
+     }
+
 })
 module.exports = router;

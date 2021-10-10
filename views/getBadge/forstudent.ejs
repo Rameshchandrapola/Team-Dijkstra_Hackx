@@ -7,12 +7,13 @@
     <title>Badge-Generator</title>
     <link href="/styles2.css" rel="stylesheet">
     <link href="/nav.css" rel="stylesheet">
+    <link href="/footer.css" rel="stylesheet">
     <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/433/433369.png"> 
 </head> 
 <body style="width: 100%;"> 
     <header class="main-head">
         <nav>
-          <h1 id="logo">ABCDEFG</h1>
+          <div class="logo"><a href="/"><img src="/images/logo.svg"><h1>Badge-Generater</h1></a></div>
           <ul class="nav-links" style="color: white;">
             <li><a href="/">HOME</a></li>
             <li><a href="/badge/user">STUDENT</a></li>
@@ -48,7 +49,7 @@
             Enter Your Details
         </h2>
         <link rel="stylesheet" href="/creater.css">
-        <form action="/badge/getBadge" style="width: 30%; margin: auto;" method="post" >
+        <form action="/badge/getBadge" style="width: 30%; margin: auto; display:block;" method="post" >
             <!-- collumn-1 -->
             <div class="col-1">
                 
@@ -69,5 +70,18 @@
                 </div>
         </form>
     </main>
+    <footer id="footer">
+        <h4>Badge-Generator &copy; 2021</h4>
+        <div id="contri">
+              <ul>
+              <lh>Contriutors</lh>
+              <li><a href="https://github.com/ayush572" target="_blank">Ayush Daga</a></li>
+              <li><a href="https://github.com/Aniumbott" target="_blank">Aniket Rana</a></li>
+              <li><a href="https://github.com/Harshil-Jani" target="_blank">Harshil Jani</a></li>
+              <li><a href="https://github.com/Rameshchandrapola" target="_blank">Pola Ramesh Chandra</a></li>
+              <li><a href="https://github.com/rahuljadav21" target="_blank">Rahul Jadav</a></li>
+              </ul>
+            </div>
+      </footer>
 </body>
 </html>
