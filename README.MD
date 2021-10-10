@@ -78,7 +78,7 @@
 ## About The Project
 
 
-<img src="./public/images/example.jpeg"> 
+<img src="https://user-images.githubusercontent.com/76244600/136686348-feb7ba9d-5302-47f7-b983-ff576c150447.png"> 
 
 To make the procedure of creating badges by different university easier we can create a simple solution that can allow the registered universities and their student to automatically create the Badge and store it on the Database for Administration purposes.
 
@@ -116,11 +116,13 @@ This is an example of how to list things you need to use the software and how to
   ```
 
 ### Installation
-1. Clone the repo
+
+1. Get a free API Key at [https://example.com](https://example.com)
+2. Clone the repo
    ```sh
    git clone https://github.com/github_username/repo_name.git
    ```
-2. Install NPM packages
+3. Install NPM packages
    ```sh
    npm install
    ```
