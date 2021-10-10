@@ -147,7 +147,7 @@ router.delete('/delete/:id/',async(req,res)=>{
     try{
         const {id}= req.params;
         await Badge.findByIdAndDelete(id);
-          res.redirect(`/badge`)
+          res.redirect(`/`)
     }catch(e){
         res.send(e)
      }
