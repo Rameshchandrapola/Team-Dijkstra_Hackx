@@ -1,4 +1,48 @@
-<% layout('layouts/boilerplate')%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Badge-Generator</title>
+    <link href="/styles2.css" rel="stylesheet">
+    <link href="/nav.css" rel="stylesheet">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/433/433369.png"> 
+</head> 
+<body style="width: 100%;"> 
+    <header class="main-head">
+        <nav>
+          <h1 id="logo">ABCDEFG</h1>
+          <ul class="nav-links" style="color: white;">
+            <li><a href="/">HOME</a></li>
+            <li><a href="/badge/user">STUDENT</a></li>
+            <li><a href="/badge/admin">ADMIN</a></li>
+          </ul>
+          <div class="burger">
+            <span class="line1"></span>
+            <span class="line2"></span>
+            <span class="line3"></span>
+          </div>
+        </nav>
+      </header>
+      <script>
+        const nav = document.querySelector(".nav-links");
+        const burger = document.querySelector(".burger");
+        const links = nav.querySelectorAll("a");
+        
+        burger.addEventListener("click", () => {
+        nav.classList.toggle("nav-open");
+        burger.classList.toggle("toggle");
+        });
+        
+        links.forEach(link => {
+        link.addEventListener("click", () => {
+        nav.classList.toggle("nav-open");
+        burger.classList.toggle("toggle");
+        });
+        });
+        
+        </script>
     <main>
         <link rel="stylesheet" href="/creater.css">
         <h2 class="form-title">
@@ -81,3 +125,5 @@
                 </div>
         </form>
     </main>
+</body>
+</html>
