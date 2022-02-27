@@ -5,7 +5,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/Rameshchandrapola/Team-Dijkstra_Hackx">
+  <a href="https://github.com/Aniumbott/Team-Dijkstra_Hackx">
     <img src="/public/images/logo.svg" alt="Logo" width="80" height="80">
   </a>
 
@@ -13,17 +13,14 @@
 
   <p align="center">
     An online tool for generating badges for collage students.
-    <br />
-    <a href="https://github.com/Rameshchandrapola/Team-Dijkstra_Hackx"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
+    <br>
     <a href="https://badge99.herokuapp.com/">View Demo</a>
     ·
     <a href="https://docs.google.com/presentation/d/1BjKXr5ULZtTp2cAIa-S0Ljvc82nfIJmwdReBrJCInA4/edit#slide=id.gf79f069ebf_0_6">Details</a>
     ·
-    <a href="https://github.com/Rameshchandrapola/Team-Dijkstra_Hackx/issues">Report Bug</a>
+    <a href="https://github.com/Aniumbott/Team-Dijkstra_Hackx/issues">Report Bug</a>
     ·
-    <a href="https://github.com/Rameshchandrapola/Team-Dijkstra_Hackx/issues">Request Feature</a>
+    <a href="https://github.com/Aniumbott/Team-Dijkstra_Hackx/issues">Request Feature</a>
   </p>
 </div>
 
@@ -53,18 +50,12 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-
-
-<img src="https://user-images.githubusercontent.com/76244600/136686348-feb7ba9d-5302-47f7-b983-ff576c150447.png"> 
-
+<br>
+<img width=1920 src="https://github.com/Aniumbott/Team-Dijkstra_Hackx/blob/master/public/images/badge-generator.png"> 
 To make the procedure of creating badges by different university easier we can create a simple solution that can allow the registered universities and their student to automatically create the Badge and store it on the Database for Administration purposes.
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
 
 
 ### Built With
-
 * [HTML5]()
 * [CSS3]()
 * [JS](https://www.javascript.com/)
@@ -72,20 +63,15 @@ To make the procedure of creating badges by different university easier we can c
 * [MongoDB](https://www.mongodb.com/)
 * [Cloudinary](https://cloudinary.com/)
 * [Heroku](https://www.heroku.com/)
-
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
+<br>
 
 <!-- GETTING STARTED -->
 ## Getting Started
-
 This is an example of how you may give instructions on setting up your project locally.
 To get a local copy up and running follow these simple example steps.
 
-### Prerequisites
 
+### Requirements
 This is an example of how to list things you need to use the software and how to install them.
 * npm
   ```sh
@@ -96,7 +82,7 @@ This is an example of how to list things you need to use the software and how to
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/Rameshchandrapola/Team-Dijkstra_Hackx.git
+   git clone https://github.com/Aniumbott/Team-Dijkstra_Hackx.git
    ```
 2. Install NPM packages
    ```sh
